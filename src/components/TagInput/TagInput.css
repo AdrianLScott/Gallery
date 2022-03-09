@@ -1,0 +1,22 @@
+.tagList{
+    display: flex;
+    margin-bottom: 10px;
+  }
+.input-container{
+   
+   flex-direction: column;
+   display: flex;
+  }
+
+  .input-tag{
+    border-radius: 5px;
+    height: 45px;
+    padding: 10px;
+    margin-top: 1rem;
+  }
+
+.input-tag:focus{
+    border-color: blue;
+    border-width: 2px;
+    outline: 2px;
+  }
