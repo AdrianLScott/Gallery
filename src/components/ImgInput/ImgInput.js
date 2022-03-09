@@ -7,18 +7,8 @@ import { getNewKey } from '../../helpers/Helper';
 const ImgInput = (props) => {
     const { previewImg, onClickUpload, onDeleteImg } = props
 
-    let renderImg = (
-        <Form.Group
-            /* key={inputFileKey}  */
-            type={'file'}
-            onChange={onClickUpload}
-            controlId="formFile"
-            className="mb-3">
-            <Form.Control type="file" />
-        </Form.Group>
-    );
     if (previewImg) {
-        renderImg = (
+        return (
             <React.Fragment>
                 <img alt="not found"
                     height={"125px"}
@@ -33,7 +23,16 @@ const ImgInput = (props) => {
             </React.Fragment>
         )
     }
-    return renderImg
+    return (
+        <Form.Group
+            /* key={inputFileKey}  */
+            type={'file'}
+            onChange={onClickUpload}
+            controlId="formFile"
+            className="mb-3">
+            <Form.Control type="file" />
+        </Form.Group>
+    );
 }
 
 export default ImgInput
